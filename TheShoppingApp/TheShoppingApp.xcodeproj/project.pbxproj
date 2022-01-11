@@ -11,7 +11,6 @@
 		0F6EF36C278D6DE200D021CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF36B278D6DE200D021CF /* SceneDelegate.swift */; };
 		0F6EF373278D6DE400D021CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F6EF372278D6DE400D021CF /* Assets.xcassets */; };
 		0F6EF376278D6DE400D021CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6EF374278D6DE400D021CF /* LaunchScreen.storyboard */; };
-		0F6EF381278D6DE400D021CF /* TheShoppingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF380278D6DE400D021CF /* TheShoppingAppTests.swift */; };
 		0F6EF39C278D6F9F00D021CF /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF39B278D6F9F00D021CF /* AppConfig.swift */; };
 		0F6EF39E278D6FA600D021CF /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF39D278D6FA600D021CF /* Environment.swift */; };
 		0F6EF3A5278D76F200D021CF /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF3A4278D76F200D021CF /* ProductListView.swift */; };
@@ -23,6 +22,7 @@
 		0F6EF3D8278D788D00D021CF /* UIKitExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6EF3D6278D788D00D021CF /* UIKitExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0F6EF3DA278D79DC00D021CF /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF3D9278D79DC00D021CF /* ProductListViewController.swift */; };
 		0F6EF3DC278D7B5C00D021CF /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF3DB278D7B5C00D021CF /* ProductListViewModel.swift */; };
+		0F6EF3E4278D920300D021CF /* ProductListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF3E3278D920300D021CF /* ProductListViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,6 @@
 		0F6EF375278D6DE400D021CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F6EF377278D6DE400D021CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F6EF37C278D6DE400D021CF /* TheShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F6EF380278D6DE400D021CF /* TheShoppingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheShoppingAppTests.swift; sourceTree = "<group>"; };
 		0F6EF39B278D6F9F00D021CF /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		0F6EF39D278D6FA600D021CF /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		0F6EF39F278D6FE300D021CF /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		0F6EF3D6278D788D00D021CF /* UIKitExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIKitExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F6EF3D9278D79DC00D021CF /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		0F6EF3DB278D7B5C00D021CF /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		0F6EF3E3278D920300D021CF /* ProductListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +114,10 @@
 		0F6EF368278D6DE200D021CF /* TheShoppingApp */ = {
 			isa = PBXGroup;
 			children = (
-				0F6EF3A1278D76CC00D021CF /* Sources */,
 				0F6EF369278D6DE200D021CF /* AppDelegate.swift */,
 				0F6EF36B278D6DE200D021CF /* SceneDelegate.swift */,
 				0F6EF39A278D6F9300D021CF /* Configs */,
+				0F6EF3A1278D76CC00D021CF /* Sources */,
 				0F6EF399278D6E7A00D021CF /* Supporting Files */,
 			);
 			path = TheShoppingApp;
@@ -126,7 +126,7 @@
 		0F6EF37F278D6DE400D021CF /* TheShoppingAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				0F6EF380278D6DE400D021CF /* TheShoppingAppTests.swift */,
+				0F6EF3E3278D920300D021CF /* ProductListViewControllerTests.swift */,
 			);
 			path = TheShoppingAppTests;
 			sourceTree = "<group>";
@@ -172,10 +172,10 @@
 		0F6EF3A3278D76E400D021CF /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
-				0F6EF3AA278D780200D021CF /* Cell */,
 				0F6EF3A4278D76F200D021CF /* ProductListView.swift */,
 				0F6EF3D9278D79DC00D021CF /* ProductListViewController.swift */,
 				0F6EF3DB278D7B5C00D021CF /* ProductListViewModel.swift */,
+				0F6EF3AA278D780200D021CF /* Cell */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -267,6 +267,7 @@
 					};
 					0F6EF37B278D6DE400D021CF = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 						TestTargetID = 0F6EF365278D6DE200D021CF;
 					};
 				};
@@ -330,7 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F6EF381278D6DE400D021CF /* TheShoppingAppTests.swift in Sources */,
+				0F6EF3E4278D920300D021CF /* ProductListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +537,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22SW3CPUDS;
@@ -550,6 +552,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ilhansari.TheShoppingAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheShoppingApp.app/TheShoppingApp";
@@ -562,6 +565,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22SW3CPUDS;

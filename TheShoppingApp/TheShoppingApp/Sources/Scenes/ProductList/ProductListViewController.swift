@@ -15,7 +15,7 @@ final class ProductListViewController: UIViewController {
     }
 
     // MARK: - Properties
-    private var viewSource = ProductListView()
+    var viewSource = ProductListView()
     private var viewModel = ProductListViewModel()
 
     override func loadView() {

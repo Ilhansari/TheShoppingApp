@@ -30,7 +30,7 @@ final class ProductListViewModel {
 // MARK: - Networking
 extension ProductListViewModel {
 
-    func getSearchProductListData(query: String = "", page: Int = 0) {
+    func getSearchProductListData(query: String = "", page: Int = 1) {
         self.delegate?.loadData(state: .loading)
         networkManager.getSearchProduct(query: query, page: page) { [weak self] result in
             guard let self = self else { return }
