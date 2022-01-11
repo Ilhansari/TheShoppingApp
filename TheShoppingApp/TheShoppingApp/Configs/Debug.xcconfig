@@ -1,0 +1,14 @@
+//
+//  Debug.xcconfig
+//  TheShoppingApp
+//
+//  Created by Ilhan Sari on 11.01.2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = TheShoppingAppDebug
+APP_VERSION = 1.0
+APP_BUNDLE_ID = com.ilhansari.TheShoppingAppDebug
+BASE_URL = https:/$()/bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/ios-assignment/

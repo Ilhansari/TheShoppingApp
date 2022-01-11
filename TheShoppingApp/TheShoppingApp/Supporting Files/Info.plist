@@ -19,5 +19,13 @@
 			</array>
 		</dict>
 	</dict>
+	<key>BaseUrl</key>
+	<string>$(BASE_URL)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(APP_VERSION)</string>
+	<key>CFBundleName</key>
+	<string>$(APP_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(APP_BUNDLE_ID)</string>
 </dict>
 </plist>
