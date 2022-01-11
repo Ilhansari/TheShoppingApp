@@ -18,6 +18,7 @@
 		0F6EF33D278D606000D021CF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF33C278D606000D021CF /* HTTPMethod.swift */; };
 		0F6EF33F278D606A00D021CF /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF33E278D606A00D021CF /* NetworkProtocol.swift */; };
 		0F6EF341278D60A400D021CF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF340278D60A400D021CF /* Router.swift */; };
+		0F6EF344278D612A00D021CF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF343278D612A00D021CF /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		0F6EF33C278D606000D021CF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		0F6EF33E278D606A00D021CF /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		0F6EF340278D60A400D021CF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		0F6EF343278D612A00D021CF /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		0F6EF32F278D5E8A00D021CF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				0F6EF342278D612300D021CF /* Endpoint */,
 				0F6EF330278D5F6700D021CF /* Encoding */,
 				0F6EF337278D5FE500D021CF /* Service */,
 			);
@@ -128,6 +131,14 @@
 				0F6EF340278D60A400D021CF /* Router.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		0F6EF342278D612300D021CF /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				0F6EF343278D612A00D021CF /* Endpoint.swift */,
+			);
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F6EF341278D60A400D021CF /* Router.swift in Sources */,
+				0F6EF344278D612A00D021CF /* Endpoint.swift in Sources */,
 				0F6EF334278D5F8A00D021CF /* URLParameterEncoding.swift in Sources */,
 				0F6EF33B278D605300D021CF /* HTTPTask.swift in Sources */,
 				0F6EF33D278D606000D021CF /* HTTPMethod.swift in Sources */,
