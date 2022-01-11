@@ -19,6 +19,8 @@
 		0F6EF33F278D606A00D021CF /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF33E278D606A00D021CF /* NetworkProtocol.swift */; };
 		0F6EF341278D60A400D021CF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF340278D60A400D021CF /* Router.swift */; };
 		0F6EF344278D612A00D021CF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF343278D612A00D021CF /* Endpoint.swift */; };
+		0F6EF34A278D622900D021CF /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF349278D622900D021CF /* ProductModel.swift */; };
+		0F6EF34D278D628200D021CF /* SearchProductsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF34C278D628200D021CF /* SearchProductsResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		0F6EF33E278D606A00D021CF /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		0F6EF340278D60A400D021CF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0F6EF343278D612A00D021CF /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		0F6EF349278D622900D021CF /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		0F6EF34C278D628200D021CF /* SearchProductsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductsResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +108,10 @@
 		0F6EF32F278D5E8A00D021CF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				0F6EF342278D612300D021CF /* Endpoint */,
 				0F6EF330278D5F6700D021CF /* Encoding */,
+				0F6EF342278D612300D021CF /* Endpoint */,
+				0F6EF348278D621B00D021CF /* Model */,
+				0F6EF34B278D625E00D021CF /* Response */,
 				0F6EF337278D5FE500D021CF /* Service */,
 			);
 			path = Networking;
@@ -139,6 +145,22 @@
 				0F6EF343278D612A00D021CF /* Endpoint.swift */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		0F6EF348278D621B00D021CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F6EF349278D622900D021CF /* ProductModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F6EF34B278D625E00D021CF /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				0F6EF34C278D628200D021CF /* SearchProductsResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,11 +274,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F6EF341278D60A400D021CF /* Router.swift in Sources */,
+				0F6EF34D278D628200D021CF /* SearchProductsResponse.swift in Sources */,
 				0F6EF344278D612A00D021CF /* Endpoint.swift in Sources */,
 				0F6EF334278D5F8A00D021CF /* URLParameterEncoding.swift in Sources */,
 				0F6EF33B278D605300D021CF /* HTTPTask.swift in Sources */,
 				0F6EF33D278D606000D021CF /* HTTPMethod.swift in Sources */,
 				0F6EF33F278D606A00D021CF /* NetworkProtocol.swift in Sources */,
+				0F6EF34A278D622900D021CF /* ProductModel.swift in Sources */,
 				0F6EF339278D5FF100D021CF /* NetworkError.swift in Sources */,
 				0F6EF332278D5F8000D021CF /* ParameterEncoding.swift in Sources */,
 				0F6EF336278D5F9A00D021CF /* JSONParameterEncoder.swift in Sources */,
