@@ -11,6 +11,9 @@
 		0F6EF3CA278D786800D021CF /* UIKitExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF3C9278D786800D021CF /* UIKitExtensionsTests.swift */; };
 		0F6EF3CB278D786800D021CF /* UIKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F6EF3BF278D786800D021CF /* UIKitExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F6EF3D5278D787D00D021CF /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF3D4278D787D00D021CF /* NSObject+Extensions.swift */; };
+		0F6EF3DE278D7EE700D021CF /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF3DD278D7EE700D021CF /* UITableView+Extensions.swift */; };
+		0F6EF3E0278D7F0100D021CF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF3DF278D7F0100D021CF /* UIViewController+Extensions.swift */; };
+		0F6EF3E2278D7FBC00D021CF /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF3E1278D7FBC00D021CF /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		0F6EF3C4278D786800D021CF /* UIKitExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F6EF3C9278D786800D021CF /* UIKitExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensionsTests.swift; sourceTree = "<group>"; };
 		0F6EF3D4278D787D00D021CF /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
+		0F6EF3DD278D7EE700D021CF /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		0F6EF3DF278D7F0100D021CF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		0F6EF3E1278D7FBC00D021CF /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				0F6EF3BF278D786800D021CF /* UIKitExtensions.h */,
 				0F6EF3D4278D787D00D021CF /* NSObject+Extensions.swift */,
+				0F6EF3DD278D7EE700D021CF /* UITableView+Extensions.swift */,
+				0F6EF3DF278D7F0100D021CF /* UIViewController+Extensions.swift */,
+				0F6EF3E1278D7FBC00D021CF /* UIImageView+Extensions.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -196,6 +205,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F6EF3D5278D787D00D021CF /* NSObject+Extensions.swift in Sources */,
+				0F6EF3E0278D7F0100D021CF /* UIViewController+Extensions.swift in Sources */,
+				0F6EF3E2278D7FBC00D021CF /* UIImageView+Extensions.swift in Sources */,
+				0F6EF3DE278D7EE700D021CF /* UITableView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
