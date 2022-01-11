@@ -24,7 +24,7 @@ final class ProductListViewModel {
     var dataSource: [ProductModel] = []
 
     weak var delegate: ProductListViewModelDelegate?
-    
+
 }
 
 // MARK: - Networking

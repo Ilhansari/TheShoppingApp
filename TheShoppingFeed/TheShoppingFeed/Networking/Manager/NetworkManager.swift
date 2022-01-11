@@ -16,15 +16,15 @@ public protocol ProductServiceProtocol {
 public var serviceBaseUrl: String = ""
 
 public class NetworkManager: ProductServiceProtocol {
-    
+
     public var baseUrl: String = ""
-    
+
     private let router = Router<ProductAPI>()
-    
+
     public init(baseUrl: String) {
         serviceBaseUrl = baseUrl
     }
-    
+
     public func getSearchProduct(query: String,
                                  page: Int,
                                  completion: @escaping (Result<SearchProductsResponse, NetworkError>) -> Void) {
@@ -32,7 +32,7 @@ public class NetworkManager: ProductServiceProtocol {
             guard error == nil else {
                 return completion(.failure(NetworkError.connectionError))
             }
-            
+
             if let response = response as? HTTPURLResponse {
                 let result = self.handleNetworkResponse(response)
                 switch result {
@@ -52,7 +52,7 @@ public class NetworkManager: ProductServiceProtocol {
             }
         }
     }
-    
+
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<Bool, NetworkError> {
         switch response.statusCode {
         case 200...299: return .success(true)

@@ -13,7 +13,7 @@ public struct URLParameterEncoder: ParameterEncoder {
         guard let url = urlRequest.url else { throw NetworkError.missingURL }
         if var urlComponents = URLComponents(url: url,
                                              resolvingAgainstBaseURL: false),
-                                             !parameters.isEmpty {
+                                            !parameters.isEmpty {
             urlComponents.queryItems = [URLQueryItem]()
 
             for (key, value) in parameters {
