@@ -14,7 +14,7 @@ public enum ProductAPI {
 extension ProductAPI: NetworkProtocol {
 
     public var baseURL: URL {
-        return URL(string: "https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/ios-assignment/")!
+        return URL(string: serviceBaseUrl)!
     }
 
     public var path: String {
