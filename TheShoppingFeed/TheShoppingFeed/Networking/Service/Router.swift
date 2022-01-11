@@ -44,6 +44,7 @@ public class Router<EndPoint: NetworkProtocol>: NetworkRouter {
                                  timeoutInterval: 10.0)
 
         request.httpMethod = route.httpMethod.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         do {
             switch route.task {
