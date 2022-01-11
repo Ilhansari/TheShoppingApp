@@ -65,7 +65,7 @@ private extension ProductListView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            stackView.topAnchor.constraint(equalTo: topAnchor),
+            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])

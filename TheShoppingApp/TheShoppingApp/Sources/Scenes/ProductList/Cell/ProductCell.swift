@@ -11,23 +11,23 @@ import TheShoppingFeed
 final class ProductCell: UITableViewCell {
 
     // MARK: - Properties
-    private lazy var imageViews: UIImageView = {
+    private lazy var productImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 4
         imageView.layer.masksToBounds = true
         imageView.backgroundColor = .lightGray
-        imageView.heightAnchor.constraint(equalToConstant: 90.0).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 90.0).isActive = true
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
 
     private lazy var productNameLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         return label
     }()
 
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [imageViews, productNameLabel])
+        let stackView = UIStackView(arrangedSubviews: [productImageView, productNameLabel])
         stackView.axis = .horizontal
         stackView.distribution = .fill
         stackView.spacing = 10.0
@@ -52,7 +52,7 @@ final class ProductCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        imageViews.image = nil
+        productImageView.image = nil
         productNameLabel.text = nil
     }
 
@@ -73,6 +73,10 @@ private extension ProductCell {
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+
+        productImageView.translatesAutoresizingMaskIntoConstraints = false
+        productImageView.widthAnchor.constraint(equalToConstant: 70.0).isActive = true
+
     }
 }
 
@@ -82,5 +86,6 @@ extension ProductCell {
     func populateUI(model: ProductModel?) {
         guard let model = model else { return }
         productNameLabel.text = model.productName
+        productImageView.load(urlString: model.productImage)
     }
 }
