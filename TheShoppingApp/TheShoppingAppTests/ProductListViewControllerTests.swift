@@ -48,5 +48,14 @@ class ProductListViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.responds(to: #selector(sut.searchBarCancelButtonClicked(_ :))))
     }
 
+    func test_tableViewHasDataSource() {
+        XCTAssertNotNil(sut.viewSource.tableView.dataSource)
+    }
 
+    func test_conformsToTableViewDataSourceProtocol() {
+
+        XCTAssertTrue(sut.conforms(to: UITableViewDataSource.self))
+        XCTAssertTrue(sut.responds(to: #selector(sut.tableView(_:numberOfRowsInSection:))))
+        XCTAssertTrue(sut.responds(to: #selector(sut.tableView(_:cellForRowAt:))))
+    }
 }

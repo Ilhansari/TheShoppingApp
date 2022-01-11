@@ -34,14 +34,13 @@ final class ProductListViewController: UIViewController {
     }
 
     private func setViewSourceDelegate() {
-        viewSource.tableView.delegate = self
         viewSource.tableView.dataSource = self
         viewSource.searchBar.delegate = self
     }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
-extension ProductListViewController: UITableViewDelegate, UITableViewDataSource {
+extension ProductListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRows
     }
