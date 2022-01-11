@@ -10,24 +10,55 @@ import XCTest
 
 class TheShoppingFeedTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var mockNetworkManager: MockProductService!
+
+    override func setUp() {
+        super.setUp()
+        mockNetworkManager = MockProductService()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        mockNetworkManager = nil
+        super.tearDown()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    func test_load_productListEmptyJSON() throws {
+        let data = try getData(name: "SearchProductsListEmpty")
+        _ = try? JSONDecoder().decode(SearchProductsResponse.self, from: data)
+        mockNetworkManager.productsSearchResult = .failure(NetworkError.noData)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        mockNetworkManager.getSearchProduct(query: "", page: 0) { result in
+            switch result {
+            case .success:
+                XCTFail("The test should have returned failure")
+            case .failure(let error):
+                XCTAssertEqual(error.rawValue, NetworkError.noData.rawValue)
+            }
         }
     }
 
+    func test_load_productListSuccessJSONData() throws {
+        let data = try getData(name: "SearchProductsList")
+        let mockResponse: SearchProductsResponse = try JSONDecoder().decode(SearchProductsResponse.self,
+                                                                            from: data)
+        mockNetworkManager.productsSearchResult = .success(mockResponse)
+
+        mockNetworkManager.getSearchProduct(query: "Apple", page: 1) { result in
+            switch result {
+            case .success(let response):
+                XCTAssertEqual(response.products, mockResponse.products)
+                XCTAssertEqual(response.products.count, 2)
+            case .failure:
+                XCTFail("The test should have returned success")
+            }
+        }
+    }
+
+    // MARK: - Helpers
+    func getData(name: String, withExtension: String = "json") throws -> Data {
+        let bundle = Bundle(for: type(of: self))
+        let fileUrl = bundle.url(forResource: name, withExtension: withExtension)
+        let data = try Data(contentsOf: fileUrl!)
+        return data
+    }
 }
